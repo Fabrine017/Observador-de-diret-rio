@@ -213,7 +213,7 @@ encerrar.set()
 O objeto utilizado para essa comunicação é:
 
 ```python
-encerrar = threading.Event()
+evento_encerrar = threading.Event()
 ```
 
 A thread de monitoramento verifica esse evento e encerra sua execução quando ele estiver definido.
@@ -338,6 +338,38 @@ except DiretorioInexistente:
 Essa abordagem permite tratar explicitamente a ausência do diretório informado.
 
 ---
+# Tratamento de arquivo de log vazio
+
+Antes de gerar o relatório final, o sistema verifica se o arquivo de logs contém algum registro.
+
+Essa verificação é realizada por meio de `os.path.getsize()`, que retorna o tamanho do arquivo em bytes. Caso o tamanho seja igual a zero, o sistema considera que nenhum evento foi registrado durante o monitoramento e define a mensagem:
+
+```text
+Nenhum evento registrado.
+```
+
+Quando o arquivo possui conteúdo, o sistema percorre seus registros e armazena o último evento encontrado para exibi-lo no relatório final.
+
+Essa validação evita erros decorrentes da tentativa de acessar informações inexistentes em um arquivo de log vazio e garante que o relatório possa ser gerado normalmente mesmo quando nenhuma alteração ocorrer no diretório monitorado.
+
+Fluxo simplificado:
+
+```text
+Arquivo de log
+      │
+      ▼
+Verifica o tamanho
+      │
+      ├── 0 bytes ──► "Nenhum evento registrado."
+      │
+      └── possui conteúdo
+              │
+              ▼
+      Obtém o último evento
+              │
+              ▼
+      Exibe no relatório
+```
 
 # Métricas e relatório
 
