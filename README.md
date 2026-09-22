@@ -1,4 +1,4 @@
-# Sistema de Monitoramento de Diretório
+# Sistema de Monitoramento de Diretório 🔎
 
 ## Sobre o projeto
 
@@ -10,7 +10,7 @@ O projeto foi desenvolvido como uma aplicação prática para estudo de **Python
 
 ---
 
-## Funcionalidades
+## Funcionalidades ⚙️
 
 - Monitoramento periódico de um diretório.
 - Identificação de arquivos adicionados.
@@ -83,7 +83,7 @@ O projeto foi desenvolvido como uma aplicação prática para estudo de **Python
 
 ---
 
-# Monitoramento do diretório
+# Monitoramento do diretório 📋
 
 A função `monitorar()` é responsável por acompanhar o estado do diretório.
 
@@ -109,7 +109,7 @@ As duas listas representam estados diferentes do diretório. A comparação perm
 
 ---
 
-## Identificação de arquivos adicionados
+## Identificação de arquivos adicionados 
 
 Os arquivos presentes no estado atual, mas ausentes no estado inicial, são identificados utilizando conjuntos:
 
@@ -127,7 +127,7 @@ Arquivo adicionado: relatorio.txt
 
 ---
 
-## Identificação de arquivos removidos
+## Identificação de arquivos removidos 
 
 O processo inverso identifica arquivos que estavam presentes inicialmente, mas não estão mais no diretório:
 
@@ -145,7 +145,7 @@ Arquivo removido: dados.csv
 
 ---
 
-## Identificação de arquivos renomeados
+## Identificação de arquivos renomeados 
 
 A identificação de renomeações utiliza o identificador retornado por:
 
@@ -175,7 +175,7 @@ Essa abordagem utiliza a identidade do arquivo como referência para diferenciar
 
 ---
 
-# Concorrência com `threading`
+# Concorrência com `threading` 🔁
 
 O sistema utiliza duas threads principais:
 
@@ -222,7 +222,7 @@ Essa estrutura permite que o programa continue monitorando o diretório enquanto
 
 ---
 
-# Sistema de logging
+# Sistema de logging ❕
 
 O projeto utiliza o módulo `logging` da biblioteca padrão do Python.
 
@@ -307,7 +307,7 @@ logs.3
 
 ---
 
-# Exceção personalizada
+# Exceção personalizada ✨
 
 O projeto possui uma exceção personalizada:
 
@@ -338,7 +338,7 @@ except DiretorioInexistente:
 Essa abordagem permite tratar explicitamente a ausência do diretório informado.
 
 ---
-# Tratamento de arquivo de log vazio
+# Tratamento de arquivo de log vazio 
 
 Antes de gerar o relatório final, o sistema verifica se o arquivo de logs contém algum registro.
 
@@ -371,7 +371,7 @@ Verifica o tamanho
       Exibe no relatório
 ```
 
-# Métricas e relatório
+# Métricas e relatório 📊
 
 Ao finalizar o monitoramento, o sistema calcula métricas relacionadas aos eventos identificados:
 
@@ -405,7 +405,7 @@ O último evento registrado também é recuperado do arquivo de log.
 
 ---
 
-# Conceitos praticados
+# Conceitos praticados 📄
 
 Este projeto reúne diversos conceitos importantes de desenvolvimento em Python:
 
@@ -461,7 +461,7 @@ Este projeto reúne diversos conceitos importantes de desenvolvimento em Python:
 
 ---
 
-# Fluxo de execução
+# Fluxo de execução 🔄️
 
 1. Solicita o caminho do diretório ao usuário.
 2. Verifica se o diretório existe.
@@ -518,7 +518,7 @@ Após o encerramento, o relatório será exibido no terminal.
 
 ---
 
-# Estrutura do projeto
+# Estrutura do projeto ⌨️
 
 ```text
 monitoramento-diretorio/
@@ -532,7 +532,7 @@ O arquivo `observador.py` contém a implementação do monitoramento, enquanto `
 
 ---
 
-# Objetivo de aprendizado
+# Objetivo de aprendizado 🧠
 
 O projeto foi desenvolvido com foco no aprendizado prático de conceitos fundamentais de Python e na aplicação desses conceitos em um problema próximo de cenários reais de observabilidade.
 
@@ -542,9 +542,9 @@ A implementação também serviu como exercício para compreender a relação en
 
 ---
 
-# Próximos passos
+# Próximos passos 📝
 
-Possíveis evoluções para o projeto incluem:
+Futuras evoluções para o projeto incluem:
 
 - Melhorar a precisão das métricas coletadas.
 - Separar configuração, monitoramento e geração do relatório em módulos distintos.
